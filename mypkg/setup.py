@@ -1,8 +1,5 @@
 from setuptools import setup
 
-import os
-from glob import glob
-
 package_name = 'mypkg'
 
 setup(
