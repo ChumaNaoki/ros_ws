@@ -1,11 +1,13 @@
-from setuptools import setup
+from setuptools import find_packages, setup
+import os
+from glob import glob
 
 package_name = 'mypkg'
 
 setup(
     name=package_name,
     version='0.0.0',
-    packages=[package_name],
+    packages=find_packages(exclude=['test']),
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
@@ -15,7 +17,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='Chuma Naoki',
-    maintainer_email='s23C1091UY@s.chibakoudai.jp',
+    maintainer_email='s23c1091uy@s.chibakoudai.jp',
     description='ロボットシステム学練習用',
     license='BSD-3-Clause',
     tests_require=['pytest'],
